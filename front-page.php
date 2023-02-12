@@ -4,7 +4,7 @@
 */
 get_header() ?>
 <main>
-    <code><frond-page class="php"></frond-page>  </code>
+    <code><frond-page class="php"></frond-page> </code>
     <h3>index.php</h3>
 <?php 
 if (have_posts()):

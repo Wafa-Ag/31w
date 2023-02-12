@@ -11,7 +11,6 @@ if (have_posts()):
         the_title('<h1>','</h1>');
         the_content();
         the_content(); 
-        
     endwhile;
 endif;
 ?>   
