@@ -9,6 +9,11 @@
 </head>
 <body>
     <header>    
+        <?php wp_nav_menu(array(
+            'menu' => 'entete', 
+            'contaire' => 'nav', 
+        ));
+        ?> 
         <h1> <a href= "<?php  bloginfo('name'); ?>"> </a> </h1>
         <h1><?php  bloginfo('name'); ?></h1>
         <h2><?php  bloginfo('description'); ?></h2>
