@@ -8,7 +8,8 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>  
+    <header classe= "site_entete">  
+        <section classe = "logomenu">   
         <?php  the_custom_logo(); 
         ?>  
         <?php wp_nav_menu(array(
@@ -16,6 +17,7 @@
             'contaire' => 'nav', 
         ));
         ?> 
+        </section>
         <h1> <a href= "<?php  bloginfo('name'); ?>"> </a> </h1>
         <h1><?php  bloginfo('name'); ?></h1>
         <h2><?php  bloginfo('description'); ?></h2>

@@ -388,6 +388,12 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+.logomenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .menu-entete-container {
   flex-wrap: wrap;
   background-color: black;
