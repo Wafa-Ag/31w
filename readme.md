@@ -1,11 +1,12 @@
-# Exercice #1
-## Installation de Wordpress et création de thème
+# Exercice #2
+## Améliorer la strucure générale du théme
 ### Auteur: Agrebi Ouafa 
 #### Objectifs
-- Installer WP
-- Créer un thème simple
-- Créer une structure Sass
-- Créer un minimum de 10 commits
-- Déployer le site local vers un serveur distant
+- Formater en scss l'affichage de markdouwn
+- Créer des modéles pour  afficher des archives d'article
+- Améliorer de module front-page.php
+- CCréation de menu
+- Créer un site adaptatif en utilsant la proche mobile-first
+- Créer 10 commits minimum
 ##### lien de site siteGround
 - aecweb.sg-host.com
