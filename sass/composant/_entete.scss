@@ -1,6 +1,7 @@
 
 .site_entete{
 
+
 }
 .logomenu {
   display: flex;
@@ -8,9 +9,9 @@
   align-items: center;
 }
 .menu-entete-container {
-    flex-wrap: wrap;
+    flex: 1;
     background-color: black;
-    padding: 20px;
+    
     .menu {
         // ul
         display: flex;
