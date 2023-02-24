@@ -17,6 +17,7 @@
             'contaire' => 'nav', 
         ));
         ?> 
+        <?= get_search_form();?>
         </section>
         <h1> <a href= "<?php  bloginfo('name'); ?>"> </a> </h1>
         <h1><?php  bloginfo('name'); ?></h1>
