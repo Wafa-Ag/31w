@@ -14,18 +14,17 @@ Text Domain: 31w-wafa
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-/*-----------------------NORMALIZE*/
+/* -------------------------- NORMALIZE */
 @import "normalize/normalize";
 @import "normalize/boxsizing";
 
 
-
-/*-----------------------BASE*/
+/* -------------------------- BASE */
 @import "base/heading";
 @import "base/markdown";
 
-
-/*-----------------------COMPOSANT*/
+/* -------------------------- COMPOSANT */
 @import "composant/entete";
 @import "composant/blocflex";
+@import "composant/recherche";
 
