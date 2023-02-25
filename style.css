@@ -388,6 +388,40 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+/* Propriétés pour le bloc <ul> */
+ul {
+  list-style-type: disc; /* Type de puce - ici cercles pleins */
+  margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+  padding: 0; /* Rembourrage à 0 pour supprimer les espacements par défaut */
+}
+
+/* Propriétés pour le bloc <ol> */
+ol {
+  list-style-type: decimal; /* Type de numérotation - ici nombres décimaux */
+  margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+  padding: 0; /* Rembourrage à 0 pour supprimer les espacements par défaut */
+}
+
+/* Propriétés pour les éléments de liste <li> */
+ul li, ol li {
+  margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+  padding: 0 0 0 1em; /* Rembourrage pour donner de l'espace après les puces / numéros */
+  line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(9, 2, 2);
+}
+
 /* -------------------------- COMPOSANT */
 .logomenu {
   display: flex;
@@ -395,26 +429,33 @@ p {
   align-items: center;
 }
 
+.menusearch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .menu-entete-container {
   flex: 1;
-  background-color: black;
 }
 .menu-entete-container .menu {
   display: flex;
   justify-content: flex-end;
-  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 20px;
   margin-left: auto;
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
+  list-style: none;
 }
 .menu-entete-container .menu .menu-item a {
-  text-decoration: none;
-  padding: 3px 6px;
-  color: white;
+  padding: 3px 5px;
+  color: #555;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: darkolivegreen;
+  color: rgb(255, 187, 0);
 }
 
 .blocflex {

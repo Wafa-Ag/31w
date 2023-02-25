@@ -1,0 +1,33 @@
+/* Propriétés pour le bloc <ul> */
+ul {
+    list-style-type: disc; /* Type de puce - ici cercles pleins */
+    margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+    padding: 0; /* Rembourrage à 0 pour supprimer les espacements par défaut */
+  }
+  
+  /* Propriétés pour le bloc <ol> */
+  ol {
+    list-style-type: decimal; /* Type de numérotation - ici nombres décimaux */
+    margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+    padding: 0; /* Rembourrage à 0 pour supprimer les espacements par défaut */
+  }
+  
+  /* Propriétés pour les éléments de liste <li> */
+  ul li, ol li {
+    margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+    padding: 0 0 0 1em; /* Rembourrage pour donner de l'espace après les puces / numéros */
+    line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+  }
+
+strong,  b {//: le texte en gras
+    font-weight: 700;
+}
+em , i { //le texte en italique
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 38, 255);
+} 
+

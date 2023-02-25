@@ -1,40 +1,49 @@
 
-.site_entete{
-
+.site__entete {
 
 }
-.logomenu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.logomenu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
+
+.menusearch {
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap : wrap;
+}
+
+
+
 .menu-entete-container {
-    flex: 1;
-    background-color: black;
-    
-    .menu {
-        // ul
-        display: flex;
-        justify-content: flex-end;
-        list-style-type: none;
-        margin-left: auto;
+flex : 1; 
 
-        .menu-item {
-            // li 
-            flex: 1 0 50px;
+.menu { //ul 
+    display : flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: auto;
+   // margin-left : auto;
 
-            a {
-                text-decoration: none;
-                padding: 3px 6px;
-                color: white;
-            }
+.menu-item { // li    color: rgb(238, 255, 0)
+        list-style: none;
 
-            a:hover {
-                color: darkolivegreen;
-
-            }
- 
-        }
-
+    a{
+        padding : 3px 5px;
+        color : #555;
     }
+    a:hover {
+        color : rgb(255, 187, 0);
+    }
+
+}
+
+}
+
+
 }
