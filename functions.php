@@ -45,7 +45,7 @@ function cidweb_modifie_requete_principal( $query ) {
          && ! is_admin() ) { // non tableau de bord
       $query->set( 'category_name', 'note-wp' );// filtre des articles de catégorie "note4w4"
       $query->set( 'orderby', 'title' ); // trie selon le titre 
-      $query->set( 'order', 'ASC' ); // en ordre ascendant
+      $query->set( 'order', 'ASC' ); // en ordre ascendant 
       }
      }
      add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
