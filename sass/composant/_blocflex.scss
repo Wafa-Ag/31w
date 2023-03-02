@@ -3,10 +3,17 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    article {
-        margin: 10px;
-        padding: 5px;
-        border: 5px solid #ddd;
-        flex: 1  0  300px;
-    }
+    
+}
+.blocflex_article {
+    margin: 10px;
+    padding: 5px;
+    border: 5px solid #ddd;
+    flex: 1  0  300px;
+}
+.blocflex_galerie {
+    margin: 10px;
+    padding: 5px;
+    border: 5px solid #ddd;
+    flex: 1  0  100%;
 }

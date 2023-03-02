@@ -6,14 +6,15 @@
     <section class="blocflex">
         <?php if (have_posts()) :
             while (have_posts()) : the_post();
-                //the_title('<h1>', '</h1>');
-                //the_permalink();
-                /* ============== */
-                //the_content();
-                //the_excerpt();
+
+            if (in_category('galerie'))
+            {
+                get_template_part ("template-parts/categorie", "galerie");
+            } else{
+                get_template_part ("template-parts/categorie", "note-wp");
+            }
+
         ?>
-                
-                <?php get_template_part ("template-parts/categorie", "note-wp"); ?>
             <?php endwhile; ?>
         <?php endif;
         ?>
