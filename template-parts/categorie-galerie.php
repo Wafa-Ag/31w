@@ -5,7 +5,7 @@
  */
 
 ?>
-<article class="blocflex_galerie">
+<article class="blocflex__galerie">
                <?php the_content(); ?> 
 </article>
             
