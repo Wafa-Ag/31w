@@ -23,7 +23,33 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- h1 {
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: Roboto, sans-serif;
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -300,7 +326,7 @@ template {
   display: none;
 }
 
-/* Définition du box sizing */
+/* Définition du boxsizing */
 ::before,
 ::after {
   box-sizing: inherit;
@@ -310,7 +336,7 @@ html {
   box-sizing: border-box;
 }
 
-/* -------------------------- BASE */
+/* ================Les fichier de base */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
 }
@@ -321,6 +347,7 @@ h2 {
 
 h3 {
   font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
+  color: white;
 }
 
 h4 {
@@ -333,6 +360,7 @@ h5 {
 
 h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  color: white;
 }
 
 P {
@@ -340,26 +368,88 @@ P {
 }
 
 h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /*_ font-family: "Slackey", cursive; _*/
+  font-family: Roboto "Times New Roman", serif;
+  /*font-family: "Slackey", cursive; */
+  color: #FFF0DB;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
 }
 
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: Roboto, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-/* -------------------------- COMPOSANT */
+main {
+  overflow: hidden;
+  padding: 30px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #FFF0DB;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004266;
+}
+
+ul li,
+ol li {
+  margin: 0.5em 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 1.5em 0;
+}
+
+/* =============== Composant */
 .logomenu {
   display: flex;
   justify-content: space-between;
@@ -423,14 +513,17 @@ p {
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
+  list-style: none;
 }
 .menu-entete-container .menu .menu-item a {
-  white-space: nowrap;
+  text-decoration: none;
+  color: #CFFFF6;
   padding: 3px 5px;
-  color: #555;
+  font-size: 25px;
+  white-space: nowrap;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: #0f0;
+  color: #2196f3;
 }
 
 .recherche {
@@ -447,8 +540,41 @@ p {
 .blocflex__article {
   margin: 10px;
   padding: 5px;
-  border: 1px solid #aaa;
+  border: 3px solid black;
   flex: 1 0 300px;
+}
+
+/* .blocflex {
+   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  display: flex;
+   Cette déclaration sera meilleur quand min() sera mieux supporté
+   grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  gap: 2rem;
+  margin: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+article:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 3px;
+  transition: ease-in-out 0.3s;
+  border: none;
+}
+
+h3 a {
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: #2196f3;
+}
+
+.blocflex__article {
+  box-shadow: rgba(0, 0, 0, 0.489) 0px 3px 8px;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #CFD4FF;
 }
 
 .blocflex__galerie {
@@ -456,8 +582,22 @@ p {
 }
 
 .main__recherche article {
-  background-color: azure;
+  background-color: #888DB3;
   margin: 10px;
+}
+
+.erreur {
+  color: red;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.site__footer {
+  min-width: 100%;
+  background-color: black;
+  color: white;
 }
 
 .menu-cours-container .menu {
@@ -472,6 +612,8 @@ p {
 }
 .menu-cours-container .menu .menu-item {
   list-style-type: none;
+  padding-left: 36px;
+  
 }
 .menu-cours-container .menu .menu-item a .cours__sigle {
   padding: 3px;
@@ -485,14 +627,14 @@ p {
   }
 }
 
-/* -------------------------- LAYOUT */
+/* =============== Layout */
 /**
 Mise en page avec display: grid
 */
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: antiquewhite;
+  background-color: #88B3AB;
 }
 
 .site__main {
@@ -507,13 +649,11 @@ Mise en page avec display: grid
 
 .site__aside {
   grid-area: aside;
-  background-color: rgb(47, 148, 210);
+  background-color:#88B3AB;
 }
 
 /* body ou un conteneur globale */
 .site {
-  width: 100vw;
-  overflow-x: hidden;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
@@ -535,4 +675,4 @@ Mise en page avec display: grid
     grid-template-columns: auto;
     grid-template-areas: "header" "main" "footer";
   }
-}
+}/*# sourceMappingURL=style.css.map */
