@@ -11,17 +11,18 @@ Mise en page avec display: grid
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: antiquewhite;
+  background-color: transparent;
 }
 
 .site__aside {
   grid-area: aside;
-  background-color: rgb(47, 148, 210);
+  background-color: rgb(223 221 226);
+  border-radius: 10px;
 }
 /* body ou un conteneur globale */
 .site {

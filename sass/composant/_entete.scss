@@ -1,5 +1,8 @@
 .site__entete {
-
+    display: block;
+    h2{
+        color: white;
+    }
 }
 .logomenu{
     display:flex;
@@ -13,6 +16,7 @@
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-end;
+
     
     @media screen and (min-width:1000px) {
         flex-direction: row;
@@ -35,11 +39,34 @@
 }
 }
 
+
+.fermer {
+    display: none;
+}
+
+#chkBurger:checked ~ .fermer {
+    display: block;
+}
+
+#chkBurger:checked ~ .burger {
+    display: none;
+}
+
+#chkBurger:checked ~ .fermer {
+    display: block;
+    
+}
+
+#chkBurger:checked ~ .burger:checked + .fermer {
+    display: none;
+}
+
 .menu-entete-container { // nav
     transform : translateX(300px);
-    transition : transform .25s;
+    transition : transform .25s;    
     @media screen and (min-width: 500px) {
-        transform : translateX(0);  
+        transform : translateX(0); 
+      
 }
 
 .menu { //ul 
@@ -48,10 +75,15 @@
     align-items: flex-end;
     justify-content: flex-start;
     list-style-type: none;
+    margin-right: 10px;
 @media screen and (min-width: 500px) {
     flex-direction : row;  
     justify-content: flex-end;
     align-items: center;
+    gap: 26px;
+    a{
+        color: #1e90ff;
+    }
 }
     
     
@@ -61,11 +93,12 @@
 
    .menu-item{ //li
     flex:1 0 50px;
-    list-style: none;;
+    list-style: none;
+    margin-left: 20px;
     a{
 
         text-decoration: none;
-        color: black;  
+        color: #ffffff;  
         padding:3px 5px;
         font-size: 20px;
         white-space: nowrap;
@@ -83,4 +116,8 @@
 .recherche {
     display : flex;
     flex-wrap: nowrap;
+}
+
+.custom-logo-link > img{
+    border-radius: 100px;
 }
