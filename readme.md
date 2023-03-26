@@ -1,4 +1,4 @@
-# Exercice 3 git 
+# Exercice 3 
 ## L'objectif de l'exercice #3:
 ### Auteur: Agrebi Ouafa
 #### Objectifs
