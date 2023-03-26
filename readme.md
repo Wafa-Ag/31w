@@ -1,4 +1,4 @@
-# TP1 
+# Exercice 3 git 
 ## L'objectif de l'exercice #3:
 ### Auteur: Agrebi Ouafa
 #### Objectifs
@@ -9,7 +9,7 @@
 
 - Déployer votre projet sur le serveur Siteground
 
-## L'exercice vous permettra de vous familiariser avec les champs personnalisés
+- L'exercice vous permettra de vous familiariser avec les champs personnalisés
 
 - Cet exercice est un premiere étape de développement du TP2
 
