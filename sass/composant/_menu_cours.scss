@@ -1,28 +1,50 @@
+.menu-note-wp-container,
 .menu-cours-container { //nav
+    margin : 0;
+display : flex;
+.menu{ // ul
+    display : flex;
+    flex : 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media screen and (min-width : 1000px) {
+        flex-direction: column;
+    }
 
-    .menu{ // ul
-        display : flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        @media screen and (min-width : 1000px) {
-            flex-direction: column;
-        }
-    
-        .menu-item{ // li
-                list-style-type: none;
-                
-            a{
-                .cours__sigle{
-                    padding : 3px;
+    .menu-item{ // li
+            list-style-type: none;
+            display : flex;
+            margin : 0;
+            
+        a{
+            display : flex;
+            flex : 1;
+            align-items: center;
+            text-decoration : none;
+            font-variant: small-caps;
+            background-color : rgba(0,0,0,.2);
+            color : #000;
+            border-radius: 5px;
+            margin : 5px 0;
+            padding : 3px 5px;
+            .cours__sigle{
+                padding : 1px 3px;
+                @media screen and (min-width:1000px) {
+                padding : 5px;    
                 }
-                .cours__titre{
-                    display : none;
-                    @media screen and (min-width : 1000px) {
-                        display : block;
-                    }
+            }
+            .cours__titre{
+                display : none;
+                @media screen and (min-width : 1000px) {
+                    display : block;
+                    margin:0;
                 }
             }
         }
+        a:hover {
+            background-color : rgba(255,255,255,.2);
+        }
     }
-    
-    }
+}
+
+}

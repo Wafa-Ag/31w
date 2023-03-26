@@ -16,22 +16,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 /* -------------------------- NORMALIZE */
 
-/* =============== Normalize */
+/* -------------------------- NORMALIZE */
 @import "normalize/normalize";
 @import "normalize/boxsizing";
 
 
-/* ================Les fichier de base */
+/* -------------------------- BASE */
 @import "base/heading";
 @import "base/markdown";
+@import "base/classe";
 
-/* =============== Composant */
+/* -------------------------- COMPOSANT */
 @import "composant/entete";
 @import "composant/blocflex";
 @import "composant/recherche";
-@import "composant/erreur";
-@import "composant/footer";
 @import "composant/menu_cours";
 
-/* =============== Layout */
+/* -------------------------- LAYOUT */
 @import "layout/aside-contenu";
