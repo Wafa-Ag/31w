@@ -27,7 +27,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
  html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-family: Roboto, sans-serif;
 }
 
 /* Sections
@@ -327,7 +326,7 @@ template {
   display: none;
 }
 
-/* Définition du boxsizing */
+/* Définition du box sizing */
 ::before,
 ::after {
   box-sizing: inherit;
@@ -337,9 +336,9 @@ html {
   box-sizing: border-box;
 }
 
-/* ================Les fichier de base */
+/* -------------------------- BASE */
 h1 {
-  font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
 }
 
 h2 {
@@ -348,113 +347,92 @@ h2 {
 
 h3 {
   font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
-  color: white;
 }
 
 h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(1rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 
 h5 {
-  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(1rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
 
 h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
-  color: white;
 }
 
 P {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
-  font-family: Roboto, sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 h2 {
-  font-family: Roboto "Times New Roman", serif;
-  /*font-family: "Slackey", cursive; */
-  color: #FFF0DB;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /*_ font-family: "Slackey", cursive; _*/
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 p {
-  font-family: Roboto, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-main {
+.invisible {
+  display: none;
+}
+
+.site__main {
+  grid-area: main;
   overflow: hidden;
-  padding: 30px;
+  margin-right: 25px;
+  margin-left: 8px;
 }
 
-h1, h2, h3 {
-  text-align: center;
+/* -------------------------- COMPOSANT */
+.blocflex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: lavender
 }
 
-h1 a {
-  text-decoration: none;
-  color: #FFF0DB;
+.blocflex__article {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+.blocflex__article a {
+  color: black;
+}
+@media screen and (min-width: 300px) {
+  .blocflex__article {
+    flex: 1 0 250px;
+    padding: 20px;
+    margin: 10px;
+  }
 }
 
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style-position: inside;
-  list-style-type: disc;
+.blocflex__galerie {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
 }
 
-strong,
-b {
-  font-weight: bold;
-}
-
-em,
-i {
-  font-style: italic;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #004266;
-}
-
-ul li,
-ol li {
-  margin: 0.5em 0;
-  padding: 0;
-  list-style-position: inside;
-  list-style-type: disc;
-}
-
-code {
-  font-family: "Courier New", Courier, monospace;
-  padding: 0.25em 0.5em;
-  border-radius: 0.25em;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 1.5em 0;
-}
-
-/* =============== Composant */
 .logomenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: snow;
 }
 
 .menusearch {
@@ -514,17 +492,17 @@ hr {
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
-  list-style: none;
 }
 .menu-entete-container .menu .menu-item a {
-  text-decoration: none;
-  color: #CFFFF6;
-  padding: 3px 5px;
-  font-size: 25px;
   white-space: nowrap;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: #2196f3;
+  color: black;
 }
 
 .recherche {
@@ -532,144 +510,174 @@ hr {
   flex-wrap: nowrap;
 }
 
-.blocflex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.blocflex__article {
-  margin: 10px;
-  padding: 5px;
-  border: 3px solid black;
-  flex: 1 0 300px;
-}
-
-/* .blocflex {
-   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  display: flex;
-   Cette déclaration sera meilleur quand min() sera mieux supporté
-   grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-  gap: 2rem;
-  margin: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
-article:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 3px;
-  transition: ease-in-out 0.3s;
-  border: none;
-}
-
-h3 a {
-  text-decoration: none;
-}
-
-h3 a:hover {
-  color: #2196f3;
-}
-
-.blocflex__article {
-  box-shadow: rgba(0, 0, 0, 0.489) 0px 3px 8px;
-  border: 1px solid black;
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #CFD4FF;
-}
-
-.blocflex__galerie {
-  flex: 1 0 100%;
-}
-
-.main__recherche article {
-  background-color: #888DB3;
-  margin: 10px;
-}
-
-.erreur {
-  color: red;
-  padding: 20px;
-  display: flex;
+.site__footer h5 {
   text-align: center;
-  justify-content: center;
+  background-color: lightgray;
+  padding: 15px;
+  margin-right: 25px;
+  margin-left: 8px;
 }
 
 .site__footer {
-  min-width: 100%;
-  background-color: black;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 10px 30px;
 }
 
-.menu-cours-container .menu {
+.footer__widget {
+  display: flex;
+  flex-direction: row;
+  margin-right: 25px;
+  margin-left: 8px;
+  gap: 5px;
+}
+
+.footer__lien {
+  margin-left: 0px;
+  background-color: rgb(255,255,255);
+}
+
+.menu-cours-container .menu,
+.menu-note-wp-container .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 1000px) {
-  .menu-cours-container .menu {
+  .menu-cours-container .menu,
+  .menu-note-wp-container .menu {
     flex-direction: column;
   }
 }
-.menu-cours-container .menu .menu-item {
+.menu-cours-container .menu .menu-item,
+.menu-note-wp-container .menu .menu-item {
   list-style-type: none;
-  padding-left: 36px;
-  
 }
-.menu-cours-container .menu .menu-item a .cours__sigle {
+.menu-cours-container .menu .menu-item a,
+.menu-note-wp-container .menu .menu-item a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  text-decoration: none;
+  font-variant: small-caps;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #000;
+  border-radius: 5px;
+  margin: 5px 0;
+  margin-right: 25px;
+  margin-left: 8px;
+  padding: 3px 5px;
+}
+.menu-cours-container .menu .menu-item a .cours__sigle,
+.menu-note-wp-container .menu .menu-item a .cours__sigle {
   padding: 3px;
 }
-.menu-cours-container .menu .menu-item a .cours__titre {
+.menu-cours-container .menu .menu-item a .cours__titre,
+.menu-note-wp-container .menu .menu-item a .cours__titre {
   display: none;
 }
 @media screen and (min-width: 1000px) {
-  .menu-cours-container .menu .menu-item a .cours__titre {
+  .menu-cours-container .menu .menu-item a .cours__titre,
+  .menu-note-wp-container .menu .menu-item a .cours__titre {
     display: block;
   }
 }
 
-/* =============== Layout */
-/**
-Mise en page avec display: grid
-*/
+.menu-note-wp-container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-note-wp-container .menu .menu-item {
+  list-style-type: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.menu-note-wp-container .menu .menu-item a {
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-note-wp-container .menu .menu-item a .note__numero {
+  padding: 3px;
+}
+.menu-note-wp-container .menu .menu-item a .note__titre {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .note__titre {
+    display: inline;
+  }
+}
+
+.main__recherche article {
+  background-color: transparent;
+  margin: 10px;
+}
+
+.menu__bloc .menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.menu__bloc .menu .menu-item {
+  flex: 1 0 30%;
+}
+.menu__bloc .menu .menu-item a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.viewport {
+  min-height: 100vh;
+  padding: 0 3rem;
+}
+
+/* -------------------------- LAYOUT */
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: #88B3AB;
+  background-color: transparent;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  background-color: #ddd;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: antiquewhite;
+  background-color: transparent;
 }
 
 .site__aside {
   grid-area: aside;
-  background-color:#88B3AB;
+  background-color: #ddd;
 }
 
 /* body ou un conteneur globale */
 .site {
+  width: 100vw;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
-  row-gap: 50px;
 }
 @media screen and (min-width: 1000px) {
   .site {
-    grid-template-columns: 30% auto;
+    grid-template-columns: 25% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
   }
 }
 
 .no-aside {
   grid-template-areas: "header" "main" "footer";
-  row-gap: 50px;
 }
 @media screen and (min-width: 1000px) {
   .no-aside {
@@ -677,29 +685,3 @@ Mise en page avec display: grid
     grid-template-areas: "header" "main" "footer";
   }
 }/*# sourceMappingURL=style.css.map */
-
-
-.site__footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__widget {
-  display: flex;
-  flex-direction: row;
-}
-.footer__widget div {
-  flex: 1 0 33%;
-}
-
-.footer__lien {
-  display: flex;
-  flex-direction: row;
-}
-.footer__lien div {
-  flex: 1 0 33%;
-}
-
-.locflex__articles{
-  background-color: #888DB3;
-}

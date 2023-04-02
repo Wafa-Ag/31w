@@ -1,20 +1,26 @@
-.site__footer{
-    display:flex;
-    flex-direction: column;
-  }
+.site__footer h5 {
+	text-align: center;
+	background-color: lightgray;
+	padding: 15px;
+	margin-right: 25px;
+	margin-left: 8px;
+}
+
+.site__footer {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 30px 10px 30px;
+}
+.footer__widget {
+	display: flex;
+	flex-direction: row;
+	margin-right: 25px;
+	margin-left: 8px;
+	gap: 5px;
+}
+.footer__lien {
+	margin-left: 0px;
+}
   
-  .footer__widget{
-      display:flex;
-      flex-direction: row;
-      div{
-          flex : 1 0 33%;
-      }
-  }
+
   
-  .footer__lien{
-      display:flex;
-      flex-direction: row;
-      div{
-          flex : 1 0 33%;
-      }
-  }
