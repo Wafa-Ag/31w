@@ -5,10 +5,10 @@
  */
 $titre = get_the_title();
 
+$titreNet = substr(str_replace("-", " ", get_the_title()), 3);
 ?>
-<article class="blocflex__article">
-               <h5><a href="<?php the_permalink(); ?>"></a></h5>
-               <h6> <?= $titre ?> </h6> 
-               <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
-</article>
-            
+<article class="blocflex__articles">
+
+    <h5><a href=<?php the_permalink(); ?>> <?= $titreNet ?></a></h5>
+    <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
+</article> 
