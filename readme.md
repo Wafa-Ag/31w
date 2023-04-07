@@ -22,7 +22,7 @@
 - Déployer votre projet sur le serveur Siteground
 
 
-## Ce projet vous permettra d'améliorer globalement votre site en y intégrant les éléments suivants:
+#### Ce projet vous permettra d'améliorer globalement votre site en y intégrant les éléments suivants:
 
 - Personnalisation de l'affichage d'un cours et de l'affichage d'une note de cours
 
