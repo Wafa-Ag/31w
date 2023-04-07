@@ -1,0 +1,25 @@
+.menu__bloc{ // nav
+
+    .menu{ //ul
+         display : flex;
+         flex-wrap: wrap;
+         list-style-type: none;;
+        .menu-item { //li
+            border : 1px solid #aaa;
+            flex : 1 0 33%;
+
+            a{
+                font-size: 2rem;
+                text-decoration: none;
+            }
+
+        }
+
+
+    }
+}
+/* ---------------------------------------------- */
+.evenement__porte {
+    background-image: url('https://s2.svgbox.net/octicons.svg?ic=bell');
+    background-repeat: no-repeat;
+}

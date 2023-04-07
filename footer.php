@@ -19,11 +19,9 @@
 
     <section class="footer__lien">
         <div>
-            <?php wp_nav_menu(array('menu' => 'lien-externe-1')); ?>
+            <?php wp_nav_menu(array('menu' => 'externe1')); ?>
         </div>
-        <div>
-            <?php wp_nav_menu(array('menu' => 'lien-externe-2')); ?>
-        </div>
+        
         <div>
             
         </div>

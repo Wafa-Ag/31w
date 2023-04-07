@@ -24,7 +24,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -326,9 +326,9 @@ template {
   display: none;
 }
 
-/* Définition du box sizing */
-::before,
-::after {
+/*Définition du box sizing */
+_::before,
+\*::after {
   box-sizing: inherit;
 }
 
@@ -338,11 +338,16 @@ html {
 
 /* -------------------------- BASE */
 h1 {
-  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(1rem, 0.25rem + 2.4vw, 3.25rem);
+}
+
+h1 {
+  font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
 }
 
 h2 {
   font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  color: white;
 }
 
 h3 {
@@ -350,11 +355,11 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 
 h5 {
-  font-size: clamp(1rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
 }
 
 h6 {
@@ -362,7 +367,7 @@ h6 {
 }
 
 P {
-  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
@@ -385,54 +390,56 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+/* Propriétés pour le bloc <ul> */
+ul {
+  list-style-type: disc; /* Type de puce - ici cercles pleins */
+  margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+  padding: 0; /* Rembourrage à 0 pour supprimer les espacements par défaut */
+}
+
+/* Propriétés pour le bloc <ol> */
+ol {
+  list-style-type: decimal; /* Type de numérotation - ici nombres décimaux */
+  margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+  padding: 0; /* Rembourrage à 0 pour supprimer les espacements par défaut */
+}
+
+/* Propriétés pour les éléments de liste <li> */
+ul li, ol li {
+  margin: 0; /* Marges à 0 pour supprimer les espacements par défaut */
+  padding: 0 0 0 1em; /* Rembourrage pour donner de l'espace après les puces / numéros */
+  line-height: 1.5; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 38, 255);
+}
+
 .invisible {
   display: none;
 }
 
-.site__main {
-  grid-area: main;
-  overflow: hidden;
-  margin-right: 25px;
-  margin-left: 8px;
-}
-
 /* -------------------------- COMPOSANT */
-.blocflex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: lavender
+.site__entete {
+  display: block;
 }
-
-.blocflex__article {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  border: 2px solid lightgray;
-  border-radius: 5px;
-}
-.blocflex__article a {
-  color: black;
-}
-@media screen and (min-width: 300px) {
-  .blocflex__article {
-    flex: 1 0 250px;
-    padding: 20px;
-    margin: 10px;
-  }
-}
-
-.blocflex__galerie {
-  flex: 1 0 100%;
-  display: flex;
-  justify-content: center;
+.site__entete h2 {
+  color: white;
 }
 
 .logomenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: snow;
 }
 
 .menusearch {
@@ -467,6 +474,26 @@ p {
   }
 }
 
+.fermer {
+  display: none;
+}
+
+#chkBurger:checked ~ .fermer {
+  display: block;
+}
+
+#chkBurger:checked ~ .burger {
+  display: none;
+}
+
+#chkBurger:checked ~ .fermer {
+  display: block;
+}
+
+#chkBurger:checked ~ .burger:checked + .fermer {
+  display: none;
+}
+
 .menu-entete-container {
   transform: translateX(300px);
   transition: transform 0.25s;
@@ -482,32 +509,140 @@ p {
   align-items: flex-end;
   justify-content: flex-start;
   list-style-type: none;
+  margin-right: 10px;
 }
 @media screen and (min-width: 500px) {
   .menu-entete-container .menu {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    gap: 26px;
+  }
+  .menu-entete-container .menu a {
+    color: #1e90ff;
   }
 }
 .menu-entete-container .menu .menu-item {
   flex: 1 0 50px;
+  list-style: none;
+  margin-left: 20px;
 }
 .menu-entete-container .menu .menu-item a {
-  white-space: nowrap;
   text-decoration: none;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  color: black;
+  color: #ffffff;
+  padding: 3px 5px;
+  font-size: 20px;
+  white-space: nowrap;
 }
 .menu-entete-container .menu .menu-item a:hover {
-  color: black;
+  color: #2196f3;
 }
 
 .recherche {
   display: flex;
   flex-wrap: nowrap;
+}
+
+.custom-logo-link > img {
+  border-radius: 100px;
+}
+
+.blocflex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blocflex__article {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+.blocflex__article a {
+  color: black;
+}
+@media screen and (min-width: 300px) {
+  .blocflex__article {
+    flex: 1 0 250px;
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+.blocflex__galerie {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main__recherche article {
+  background-color: azure;
+  margin: 10px;
+}
+
+.menu-note-wp-container,
+.menu-cours-container {
+  margin: 0;
+  display: flex;
+}
+.menu-note-wp-container .menu,
+.menu-cours-container .menu {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu,
+  .menu-cours-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-note-wp-container .menu .menu-item,
+.menu-cours-container .menu .menu-item {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+.menu-note-wp-container .menu .menu-item a,
+.menu-cours-container .menu .menu-item a {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  text-decoration: none;
+  font-variant: small-caps;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #000;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 3px 5px;
+}
+.menu-note-wp-container .menu .menu-item a .cours__sigle,
+.menu-cours-container .menu .menu-item a .cours__sigle {
+  padding: 1px 3px;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .cours__sigle,
+  .menu-cours-container .menu .menu-item a .cours__sigle {
+    padding: 5px;
+  }
+}
+.menu-note-wp-container .menu .menu-item a .cours__titre,
+.menu-cours-container .menu .menu-item a .cours__titre {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-note-wp-container .menu .menu-item a .cours__titre,
+  .menu-cours-container .menu .menu-item a .cours__titre {
+    display: block;
+    margin: 0;
+  }
+}
+.menu-note-wp-container .menu .menu-item a:hover,
+.menu-cours-container .menu .menu-item a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .site__footer h5 {
@@ -534,89 +669,6 @@ p {
 
 .footer__lien {
   margin-left: 0px;
-  background-color: rgb(255,255,255);
-}
-
-.menu-cours-container .menu,
-.menu-note-wp-container .menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 1000px) {
-  .menu-cours-container .menu,
-  .menu-note-wp-container .menu {
-    flex-direction: column;
-  }
-}
-.menu-cours-container .menu .menu-item,
-.menu-note-wp-container .menu .menu-item {
-  list-style-type: none;
-}
-.menu-cours-container .menu .menu-item a,
-.menu-note-wp-container .menu .menu-item a {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  text-decoration: none;
-  font-variant: small-caps;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #000;
-  border-radius: 5px;
-  margin: 5px 0;
-  margin-right: 25px;
-  margin-left: 8px;
-  padding: 3px 5px;
-}
-.menu-cours-container .menu .menu-item a .cours__sigle,
-.menu-note-wp-container .menu .menu-item a .cours__sigle {
-  padding: 3px;
-}
-.menu-cours-container .menu .menu-item a .cours__titre,
-.menu-note-wp-container .menu .menu-item a .cours__titre {
-  display: none;
-}
-@media screen and (min-width: 1000px) {
-  .menu-cours-container .menu .menu-item a .cours__titre,
-  .menu-note-wp-container .menu .menu-item a .cours__titre {
-    display: block;
-  }
-}
-
-.menu-note-wp-container .menu {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 1000px) {
-  .menu-note-wp-container .menu {
-    flex-direction: column;
-  }
-}
-.menu-note-wp-container .menu .menu-item {
-  list-style-type: none;
-  padding: 5px;
-  border-radius: 5px;
-}
-.menu-note-wp-container .menu .menu-item a {
-  font-weight: 600;
-  text-decoration: none;
-}
-.menu-note-wp-container .menu .menu-item a .note__numero {
-  padding: 3px;
-}
-.menu-note-wp-container .menu .menu-item a .note__titre {
-  display: none;
-}
-@media screen and (min-width: 1000px) {
-  .menu-note-wp-container .menu .menu-item a .note__titre {
-    display: inline;
-  }
-}
-
-.main__recherche article {
-  background-color: transparent;
-  margin: 10px;
 }
 
 .menu__bloc .menu {
@@ -625,12 +677,18 @@ p {
   list-style-type: none;
 }
 .menu__bloc .menu .menu-item {
-  flex: 1 0 30%;
+  border: 1px solid #aaa;
+  flex: 1 0 33%;
 }
 .menu__bloc .menu .menu-item a {
   font-size: 2rem;
   text-decoration: none;
-  color: black;
+}
+
+/* ---------------------------------------------- */
+.evenement__porte {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=bell");
+  background-repeat: no-repeat;
 }
 
 .viewport {
@@ -639,26 +697,29 @@ p {
 }
 
 /* -------------------------- LAYOUT */
+/**
+Mise en page avec display: grid
+*/
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #ddd;
+  background-color: aquamarine;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: transparent;
+  background-color: antiquewhite;
 }
 
 .site__aside {
   grid-area: aside;
-  background-color: #ddd;
+  background-color: rgb(47, 148, 210);
 }
 
 /* body ou un conteneur globale */
@@ -667,7 +728,7 @@ p {
   overflow-x: hidden;
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "header" "aside" "main" "footer";
+  grid-template-areas: "header" "aside" "main" "aside2" "footer";
 }
 @media screen and (min-width: 1000px) {
   .site {
