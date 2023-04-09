@@ -5,9 +5,10 @@
 get_header() ?>
 <main class="site__main">
  <section class="viewport">
-    <h1>Tp2</h1>
+    <h1> Travail pratique (TP2) pour le cours de WordPress </h1>
     <h4>Auteur: Agrebi Wafa </h4>
     <h4>Cours: 31w - Introduction à un gestionnaire de contenu</h4>
+    <h3> ÉVENEMENTS </h3>
     <?php wp_nav_menu(array(
         "menu"=>"evenement",
         "container"=>"nav",

@@ -37,10 +37,12 @@ h1 {
 
 h2 {
   font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* Entre 24px et 40px */
+ 
 }
 
 h3 {
   font-size: clamp(1.25rem, 2.5vw, 2rem); /* Entre 20px et 32px */
+  color: navajowhite;
 }
 
 h4 {
@@ -182,6 +184,8 @@ sup {
  */
 img {
   border-style: none;
+  height: 50%;
+  width: 100%;
 }
 
 /* Forms
@@ -329,6 +333,29 @@ textarea {
   font: inherit; /* 2 */
 }
 
+
+.bouton__ouvrir {
+  /* Couleur du texte */
+  color: #fff;
+  
+  /* Couleur d'arrière-plan */
+  background-color: #c57488;
+  
+  /* Bordure */
+  border: none;
+  border-radius: 4px;
+  
+  /* Marge et rembourrage */
+  margin: 10px;
+  padding: 10px 20px;
+  
+  /* Effet de survol */
+  transition: background-color 0.3s ease-in-out;
+}
+.bouton__ouvrir:hover {
+  background-color: black;
+}
+
 /* Interactive
    ========================================================================== */
 /*
@@ -391,6 +418,7 @@ h3 {
 
 h4 {
   font-size: clamp(1rem, 2vw, 1.5rem); /* Entre 16px et 24px */
+  text-align: center;
 }
 
 h5 {
@@ -407,7 +435,7 @@ p {
 
 h1 {
   font-family: Roboto, sans-serif;
-  color: darkmagenta;
+  color: navajowhite;
 }
 
 h2 {
@@ -437,6 +465,7 @@ h1, h2, h3 {
 
 h1 a {
   text-decoration: none;
+  color: white;
 }
 
 ul,
@@ -503,6 +532,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #c57488;
 }
 
 .menusearch {
@@ -614,6 +644,7 @@ hr {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #ffffffc2;
 }
 
 .blocflex__article {
@@ -631,17 +662,6 @@ hr {
   text-align: center;
 }
 
-/* .blocflex {
-   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  display: flex;
-   Cette déclaration sera meilleur quand min() sera mieux supporté
-   grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-  gap: 2rem;
-  margin: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-} */
 article.blocflex__article:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 3px;
   transition: ease-in-out 0.3s;
@@ -653,7 +673,7 @@ h3 a, h5 a {
 }
 
 h3 a:hover {
-  color: #2196f3;
+  color: white;
 }
 
 .blocflex__article {
@@ -700,8 +720,6 @@ h3 a:hover {
 }
 .footer__lien div {
   flex: 1 0 33%;
-  background-color : hwb(155.88deg 39.92% 22.68%);
-
 }
 
 #menu-lien {
@@ -805,7 +823,7 @@ h3 a:hover {
 }
 
 .viewport {
-  min-height: 80vh;
+  min-height: 44vh;
 }
 
 /* =============== Layout */
@@ -821,21 +839,30 @@ Mise en page avec display: grid
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: hwb(155.88deg 39.92% 22.68%); 
+  background-color:#c57488;
 }
 .site__main .prof-dom {
   display: flex;
   justify-content: space-between;
 }
+.site__main .menu{
+  width: 80%;
+  margin:auto;
+}
+.site__main .menu li{
+  padding-left: 55px;
+  list-style: none;
+}
 
 .site__footer {
   grid-area: footer;
   background-color: transparent;
+  background-color: #ffffffc2;
 }
 
 .site__aside {
   grid-area: aside;
-  background-color:var(--wp--preset--color--light-green-cyan);
+  background-color:#abb8c3;
   border-radius: 10px;
 }
 
