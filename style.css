@@ -45,6 +45,7 @@ h3 {
 
 h4 {
   font-size: clamp(1rem, 2vw, 1.5rem); /* Entre 16px et 24px */
+  color: cornsilk;
 }
 
 h5 {
@@ -406,6 +407,7 @@ p {
 
 h1 {
   font-family: Roboto, sans-serif;
+  color: darkmagenta;
 }
 
 h2 {
@@ -456,7 +458,7 @@ i {
 }
 
 a {
-  color: #0073aa;
+  color: cf2e2e; 
   text-decoration: underline;
 }
 
@@ -698,6 +700,8 @@ h3 a:hover {
 }
 .footer__lien div {
   flex: 1 0 33%;
+  background-color : hwb(155.88deg 39.92% 22.68%);
+
 }
 
 #menu-lien {
@@ -789,7 +793,6 @@ h3 a:hover {
 }
 .menu__bloc .menu .menu-item {
   flex: 1 0 33%;
-  list-style-type: none;
 }
 .menu__bloc .menu .menu-item a {
   font-size: 2rem;
@@ -797,7 +800,7 @@ h3 a:hover {
 }
 
 .evenement__porte {
-  background-image: url("https://s2.svgbox.net/flags-ld.svg?ic=ca");
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=bell&color=000");
   background-repeat: no-repeat;
 }
 
@@ -818,7 +821,7 @@ Mise en page avec display: grid
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: rgb(255, 255, 255);
+  background-color: hwb(155.88deg 39.92% 22.68%); 
 }
 .site__main .prof-dom {
   display: flex;
@@ -832,7 +835,7 @@ Mise en page avec display: grid
 
 .site__aside {
   grid-area: aside;
-  background-color: rgb(223, 221, 226);
+  background-color:var(--wp--preset--color--light-green-cyan);
   border-radius: 10px;
 }
 

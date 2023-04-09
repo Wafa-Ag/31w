@@ -94,8 +94,8 @@ function ajouter_description_class_menu( $items, $args ) {
             // Récupérer le titre, la description et la classe personnalisée
             $titre = $item->title;
             $description = $item->description;
-           
-
+            
+        
             // Ajouter la description et la classe personnalisée à l'élément de menu
             $item->title .= '<span>' . $description . '</span>';
         }
