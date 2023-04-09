@@ -52,6 +52,7 @@ h4 {
 
 h5 {
   font-size: clamp(0.875rem, 1.5vw, 1.25rem); /* Entre 14px et 20px */
+  text-align: center;
 }
 
 h6 {
@@ -716,7 +717,23 @@ h3 a:hover {
 
 .footer__lien {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+.footer__lien .menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__lien > div:first-child {
+  width: 100%;
+}
+
+.footer__lien .menu li a {
+  text-decoration: none;
+}
+
+.footer__lien .menu li {
+  list-style: none;
 }
 .footer__lien div {
   flex: 1 0 33%;
@@ -891,3 +908,23 @@ Mise en page avec display: grid
     grid-template-areas: "header" "main" "footer";
   }
 }/*# sourceMappingURL=style.css.map */
+
+
+.blocflex {
+  padding-top: 20px;
+}
+
+.blocflex .blocflex__articles {
+  padding-left: 40px;
+  width: 100%;
+  margin: 28px;
+  background: #d8bfc6;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 5px 10px #00000080;
+
+}
+
+.blocflex .blocflex__articles:hover {
+  transform: scale(1.02);
+}
