@@ -822,8 +822,7 @@ h3 a:hover {
 }
 
 .menu__bloc .menu {
-  display: flex;
-  flex-wrap: wrap;
+ 
   list-style-type: none;
 }
 .menu__bloc .menu .menu-item {
