@@ -1,46 +1,40 @@
-.search-form {
-    margin-top: 2rem;
-  }
-  
-  .search-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .search-form .screen-reader-text {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
-  }
-  
-  .search-form input[type="search"] {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+    
+    .title {
+    font-size: 36px;
+    color: red;
+    }
+    
+    .subtitle {
+    font-weight: 600;
+    color: red;
+    margin-top: 20px;
+    }
+    
+    .search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    }
+    
+    input[type="text"] {
     width: 100%;
+    padding: 8px 10px;
+    margin: 8px 0;
     box-sizing: border-box;
-  }
-  
-  .search-form input[type="search"]:focus {
-    outline: none;
-    border-color: #666;
-  }
-  
-  .search-form button[type="submit"] {
-    padding: 0.5rem 1rem;
-    background-color: #0073aa;
-    color: #fff;
     border: none;
-    border-radius: 3px;
-    font-size: 1rem;
+    border-bottom: 2px solid #ddd;
+    font-size: 16px;
+    }
+    
+    button[type="submit"] {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-  }
-  
-  .search-form button[type="submit"]:hover {
-    background-color: darken(#0073aa, 10%);
-  }
+    }
