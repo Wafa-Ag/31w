@@ -1,40 +1,41 @@
-# TP2 (25 points) :  
-## L'objectif du TP2 :
+# Épreuve finale 31W:  
+## Objectif : Adapter le modèle 404.php pour reproduire la maquette :
 ### Auteur: Agrebi Ouafa
 #### Objectifs
 
-- Créer une page d'accueil interactive utiliser le modèle « front-page.php »
+- Titre principal (1 point)
 
-- Dynamiser la structure de menu mobile actuel
+- Sous-titre et texte  (1 point)
 
 - Améliorer votre structure de sidebar
 
-- Améliorer l'apparence du footer
+- Une image en arrière plan avec filtre opaque. Vous pouvez choisir votre image (3 points)
 
-- Améliorer le modèle category-cours pour synthétiser l'offre de cours
+- Formulaire de recherche fonctionnel et reproduit comme sur la maquette  (3 points)
 
-- Créer quelques modèles et templates
+- -	Le menu wp « cours »  (2 points)
 
 - Continuer à faire progresser votre thème
 
-- Améliorer l'extension carrousel
+- Le menu wp « note-wp » (2 points)
 
-- Déployer votre projet sur le serveur Siteground
+- La zone aside n'apparaît pas dans cette page (3 points)
 
 
-#### Ce projet vous permettra d'améliorer globalement votre site en y intégrant les éléments suivants:
+#### Caractéristiques (10 points):
 
-- Personnalisation de l'affichage d'un cours et de l'affichage d'une note de cours
+-	La page s'adapte à différentes largeurs d'écran (5 points)
+-	La page reproduit fidèlement la maquette (5 points)
 
-- Personnalisation et amélioration des archives (category.php)
+##### Git (5 points)
 
-- Amélioration du design et du fonctionnement de l'entête du site
-
-- Une page d'accueil contenant des blocs annonçant les événements, les nouveaux articles ou tous autres contenus importants du site
-
-##### Déroulement du projet
-
-- Les « commits » seront poussés dans le dépôt 31w et 31w-extension de votre github dans la branche tp2. L'ensemble des commits devra s'étaler progressivement à partir de la journée de remise du devis jusqu'à la remise finale du TP. Un minimum de 10 commits pour le thème et pour l'extension permettra d'évaluer l'évolution de votre projet
+-	Création de 5 commits. Les commit devront être étalé sur l’ensemble de la durée de l’épreuve (3 heures).  La branche « EF » devra être créée dès le début de l’épreuve, tous les commits seront contenus dans cette branche.  (3 points)
+-	Chaque commit devra contenir un message décrivant simplement l’étape réalisée (1 point)
+-	La branche « EF » contiendra un readme.md avec l’information suivante : (1 point)
+-	Titre
+-	Auteur
+-	Courte description
+-	Lien vers votre site siteground
 
 ##### siteGround 
 - aecweb.sg-host.com
